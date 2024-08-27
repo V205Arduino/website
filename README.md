@@ -1,3 +1,15 @@
+Install dependancies I think
+```
+npm install
+```
+Build it I think
+
+```
+npm run build
+```
+
+
+
 # [Astro](https://astro.build) Blog Template
 
 [![Screenshot](screenshot.png)](https://astro-blog-template.netlify.app/)
