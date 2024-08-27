@@ -8,6 +8,13 @@ Build it I think
 npm run build
 ```
 
+Todo:
+- Fix the undefined errors
+- Add tags to blog
+- Add search to blog
+- Add slackbot
+  
+
 
 
 # [Astro](https://astro.build) Blog Template
