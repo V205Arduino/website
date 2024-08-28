@@ -7,5 +7,5 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/base"
 }
