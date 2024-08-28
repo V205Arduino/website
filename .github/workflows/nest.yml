@@ -19,13 +19,10 @@ jobs:
       run: |
         echo "$SSH_PRIVATE_KEY" > private_key
         chmod 600 private_key
-        # echo "Host myserver
-        #     HostName ${{ secrets.SERVER_IP }}
-        #     User ${{ secrets.SERVER_USER }}
-        #     IdentityFile $(pwd)/private_key
-        #     StrictHostKeyChecking no" >> ~/.ssh/config
+        ssh -o StrictHostKeychecking=no v205@hackclub.app
 
     - name: Execute commands over SSH
       run: |
+
         ssh v205@hackclub.app "echo 'Hello from GitHub Actions!'"
         
