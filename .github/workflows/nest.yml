@@ -27,5 +27,5 @@ jobs:
 
     - name: Execute commands over SSH
       run: |
-        ssh myserver "echo 'Hello from GitHub Actions!'"
+        ssh v205@hackclub.app "echo 'Hello from GitHub Actions!'"
         
