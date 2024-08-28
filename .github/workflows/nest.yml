@@ -17,8 +17,15 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
-        echo "$SSH_PRIVATE_KEY" > private_key
-        chmod 600 private_key
+        mkdir -p ~/.ssh
+        # cd
+        # cd ~/.ssh
+        chmod 600 /.ssh/id_rsa
+        echo "$SSH_PRIVATE_KEY" > /.ssh/id_rsa
+
+        chmod 600 /.ssh/id_rsa
+        chmod 600 /.ssh/id_rsa
+        chmod 600 /.ssh/id_rsa
         ssh -o StrictHostKeychecking=no v205@hackclub.app
 
     - name: Execute commands over SSH
