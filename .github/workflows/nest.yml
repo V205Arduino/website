@@ -1,0 +1,31 @@
+name: Nest Deploy
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  ssh:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up SSH
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      run: |
+        echo "$SSH_PRIVATE_KEY" > private_key
+        chmod 600 private_key
+        echo "Host myserver
+            HostName ${{ secrets.SERVER_IP }}
+            User ${{ secrets.SERVER_USER }}
+            IdentityFile $(pwd)/private_key
+            StrictHostKeyChecking no" >> ~/.ssh/config
+
+    - name: Execute commands over SSH
+      run: |
+        ssh myserver "echo 'Hello from GitHub Actions!'"
+        
