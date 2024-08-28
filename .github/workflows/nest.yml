@@ -19,11 +19,11 @@ jobs:
       run: |
         echo "$SSH_PRIVATE_KEY" > private_key
         chmod 600 private_key
-        echo "Host myserver
-            HostName ${{ secrets.SERVER_IP }}
-            User ${{ secrets.SERVER_USER }}
-            IdentityFile $(pwd)/private_key
-            StrictHostKeyChecking no" >> ~/.ssh/config
+        # echo "Host myserver
+        #     HostName ${{ secrets.SERVER_IP }}
+        #     User ${{ secrets.SERVER_USER }}
+        #     IdentityFile $(pwd)/private_key
+        #     StrictHostKeyChecking no" >> ~/.ssh/config
 
     - name: Execute commands over SSH
       run: |
