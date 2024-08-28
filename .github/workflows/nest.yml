@@ -10,8 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    #idk what this is so I'll comment and see if anything breaks
+    # - name: Checkout code
+    #   uses: actions/checkout@v2
 
     - name: Set up SSH
       env:
@@ -26,8 +27,8 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh -o StrictHostKeychecking=no v205@hackclub.app
 
-    - name: Execute commands over SSH
+    - name: Build Astro on Nest
       run: |
+        ssh -o StrictHostKeychecking=no v205@hackclub.app "touch helloworld.md'"
 
-        ssh -o StrictHostKeychecking=no v205@hackclub.app "echo 'Hello from GitHub Actions!'"
         
