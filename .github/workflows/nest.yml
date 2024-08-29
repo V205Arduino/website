@@ -29,5 +29,6 @@ jobs:
 
     - name: Deploy to Nest
       run: |
-        ssh -o StrictHostKeychecking=no v205@hackclub.app "ls"
+        ssh -o StrictHostKeychecking=no v205@hackclub.app "git clone https://github.com/v205arduino/website"
+        ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website; npm build"
         
