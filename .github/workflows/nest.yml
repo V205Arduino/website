@@ -32,10 +32,12 @@ jobs:
       run: |
         ssh -o StrictHostKeychecking=no v205@hackclub.app
         ls
-        cd
-        cd website
-        git pull
-        npm build
+        #cd
+        #cd website
+        #git pull
+        #npm build
+        ls
+        
         # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
         # # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
         # # ssh -o StrictHostKeychecking=no v205@hackclub.app "git pull"
