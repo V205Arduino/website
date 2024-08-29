@@ -39,10 +39,10 @@ jobs:
         ls
         echo $USER
         ssh -o StrictHostKeychecking=no v205@hackclub.app "echo $USER"
-
+        ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website; git pull; npm build"
         # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
-        # # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
-        # # ssh -o StrictHostKeychecking=no v205@hackclub.app "git pull"
+        # # 
+        # # ssh -o StrictHostKeychecking=no v205@hackclub.app ""
         # # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website; npm build"
         # # ssh -o StrictHostKeychecking=no v205@hackclub.app "echo "Success!" "
         # # ls
