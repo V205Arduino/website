@@ -30,6 +30,6 @@ jobs:
     - name: Deploy to Nest
       run: |
         ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
-        ssh -o StrictHostKeychecking=no v205@hackclub.app "git pull origin main "
+        ssh -o StrictHostKeychecking=no v205@hackclub.app "git pull V205arduino/website website/ "
         ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website; npm build"
         
