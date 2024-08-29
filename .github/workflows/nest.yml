@@ -29,5 +29,5 @@ jobs:
 
     - name: Deploy to Nest
       run: |
-        ssh -o StrictHostKeychecking=no v205@hackclub.app "echo 'Hello from GitHub Actions!'"
+        ssh -o StrictHostKeychecking=no v205@hackclub.app "ls"
         
