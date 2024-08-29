@@ -25,15 +25,21 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh -o StrictHostKeychecking=no v205@hackclub.app
+        #ssh -o StrictHostKeychecking=no v205@hackclub.app
         ls
 
     - name: Deploy to Nest
       run: |
-        ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
-        ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
-        ssh -o StrictHostKeychecking=no v205@hackclub.app "git pull"
-        ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website; npm build"
-        ssh -o StrictHostKeychecking=no v205@hackclub.app "echo "Success!" "
+        ssh -o StrictHostKeychecking=no v205@hackclub.app
         ls
+        cd
+        cd website
+        git pull
+        npm build
+        # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
+        # # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
+        # # ssh -o StrictHostKeychecking=no v205@hackclub.app "git pull"
+        # # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website; npm build"
+        # # ssh -o StrictHostKeychecking=no v205@hackclub.app "echo "Success!" "
+        # # ls
         
