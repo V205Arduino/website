@@ -38,6 +38,7 @@ jobs:
         #npm build
         ls
         echo $USER
+        ssh -o StrictHostKeychecking=no v205@hackclub.app "echo $USER"
 
         # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
         # # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
