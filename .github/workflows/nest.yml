@@ -39,8 +39,14 @@ jobs:
         ls
         echo $USER
         ssh -o StrictHostKeychecking=no v205@hackclub.app "echo $USER"
-        ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website; git pull; export COMMIT_HASH="my value"; npm run build"
-        
+        ssh -o StrictHostKeyChecking=no v205@hackclub.app << 'EOF'
+          cd ~ && \
+          cd website && \
+          git pull && \
+          COMMIT_HASH=$(git rev-parse HEAD) && \
+          export COMMIT_HASH && \
+          npm run build
+        EOF
         # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
         # # 
         # # ssh -o StrictHostKeychecking=no v205@hackclub.app ""
