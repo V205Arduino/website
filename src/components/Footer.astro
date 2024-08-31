@@ -1,22 +1,23 @@
 <footer>
   <span>
-    &copy; {new Date().getFullYear()} <a href="https://github.com/v205arduino" target="_blank" rel="noopener">V205</a>.
+    &copy; { new Date().getFullYear() } <a href="https://github.com/v205arduino" target="_blank" rel="noopener">V205</a>.
     Powered by <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>.
-    <a href="https://github.com/v205arduino/website/commit/{COMMIT_HASH}" target="_blank" rel="noopener">Commit: {import.meta.env.COMMIT_HASH}</a>
-    Built on:
+    <a href="https://github.com/v205arduino/website/commit/\`${import.meta.env.COMMIT_HASH}\`" target="_blank" rel="noopener">Commit: { import.meta.env.COMMIT_HASH }</a>
+    Built on: <span id="build-date"></span>
     Template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener">Maxi Ferreira</a>.
   </span>
 </footer>
 
 <script>
-  const buildDate = new Date().toLocaleString(); // Format the date/time
-  export const COMMIT_HASH = import.meta.env.VITE_COMMIT_HASH; // Access the environment variable
+  const buildDate = new Date().toLocaleString();
+  document.getElementById('build-date').textContent = buildDate;
+  const url = "https://github.com/v205arduino/website/commit/" + import.meta.env.COMMIT_HASH
 </script>
 
 <style>
   footer {
     color: var(--text-secondary);
-    font-size: .8em;
+    font-size: 0.8em;
     margin: 1em auto;
     max-width: 1400px;
     padding: 1em 2em;
