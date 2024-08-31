@@ -1,11 +1,17 @@
 <footer>
   <span>
-    &copy; {new Date().getFullYear()} <a href="https://github.com/v205arduino" target="_blank" rel="noopener">V205</a>..
+    &copy; {new Date().getFullYear()} <a href="https://github.com/v205arduino" target="_blank" rel="noopener">V205</a>.
     Powered by <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>.
-    <a href="https://github.com/v205arduino/website" target="_blank" rel="noopener">Source Repository </a>
+    <a href="https://github.com/v205arduino/website/commit/{COMMIT_HASH}" target="_blank" rel="noopener">Commit: {import.meta.env.COMMIT_HASH}</a>
+    Built on:
     Template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener">Maxi Ferreira</a>.
   </span>
 </footer>
+
+<script>
+  const buildDate = new Date().toLocaleString(); // Format the date/time
+  export const COMMIT_HASH = import.meta.env.VITE_COMMIT_HASH; // Access the environment variable
+</script>
 
 <style>
   footer {
