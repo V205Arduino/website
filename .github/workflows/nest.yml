@@ -44,7 +44,6 @@ jobs:
           cd website && \
           git pull && \
           bash deploy.sh
-          
         EOF
         # ssh -o StrictHostKeychecking=no v205@hackclub.app "cd; cd website"
         # # 
