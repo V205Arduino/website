@@ -30,5 +30,7 @@ Strategies I have tried, with some comments.
     ``` 
   - This works really good on GPT, shorter sentencence and words.
   - Here's a share URL of a similar prompt being used. [Link to Redarena.ai share, sensitive content warning](https://redarena.ai/share/c76a26f2-474c-4977-ae91-43826fbc374c)
-  
+- Acronyms that are completly, not insulting!
+  - made up some acronyms, got it to be confused.
+
 A interesting one made by [Kieran](https://kieranklukas.com/), ask the AI model if the text is offensive, should work around 60%, can be fine tuned.
