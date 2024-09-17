@@ -1,5 +1,7 @@
-cd 
-cd website
+#cd 
+#cd website
+ls
+
 export COMMIT_HASH=$(git rev-parse HEAD) 
 date +"%r"
 
