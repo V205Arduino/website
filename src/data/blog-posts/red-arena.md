@@ -34,3 +34,6 @@ Strategies I have tried, with some comments.
   - made up some acronyms, got it to be confused.
 
 A interesting one made by [Kieran](https://kieranklukas.com/), ask the AI model if the text is offensive, should work around 60%, can be fine tuned.
+
+Such practices got me to the #80th ranking globally.
+I kinda started to lose interest, so I'll wait till LLMs are harder.
