@@ -18,9 +18,11 @@
       } catch (err) {
         error = err.message;
         console.log("aaa err")
+        console.log(error)
       } finally {
         loading = false;
-        console.log("test")
+        console.log("loaded!")
+        console.log(data)
       }
     }
 
