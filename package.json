@@ -1,8 +1,8 @@
 {
-  "name": "v205-github-website",
+  "name": "users-viggo-documents-github-website",
   "version": "0.0.1",
   "scripts": {
-    "dev": "bash dev.sh",
+    "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
