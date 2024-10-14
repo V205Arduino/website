@@ -31,6 +31,11 @@ html {
   box-sizing: border-box;
 }
 
+
+p {
+  font-size: 5px;
+
+}
 body {
   margin: 0;
   font-family: var(--font-family-serif);
@@ -72,11 +77,11 @@ h4 {
 }
 
 h5 {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 h6 {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 p,

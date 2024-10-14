@@ -9,31 +9,10 @@ const permalink = `${Astro.site!.href}404`;
 <BaseLayout title={title} description={description} permalink={permalink} current="N/A">
   
 
-  <div class="container">
+  <div class="404-container">
     <h2>404 error, page not found.</h1>
     <a href="/">Go to Homepage</a>
     <p>Sorry if you were looking for something but it doesn't exist(anymore? yet?)!</p>
 
   </div>
 </BaseLayout>
-
-<style>
-    .about-image {
-      float: right;
-      margin: -3em -7em 2em 2em;
-      max-width: 300px;
-    }
-  
-    .about-image img {
-      border-radius: 8px;
-      margin-bottom: 1.5em;
-    }
-  
-    @media (max-width: 1020px) {
-      .about-image {
-        float: none;
-        margin: 0 auto 2em;
-      }
-    }
-  </style>
-  

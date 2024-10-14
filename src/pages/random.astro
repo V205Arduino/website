@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Redirecting to a interesting page...';
+const description = 'Redirecting you to a random page that V205 found interesting.';
+const permalink = `${Astro.site!.href}random`;
+//("https://naut-3hjr.onrender.com/random");
+console.log("test");
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="N/A">
+  <head>
+    <meta http-equiv="refresh" content="0; url=https://naut-3hjr.onrender.com/random" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href="https://naut-3hjr.onrender.com/random"> a random webpage!</a>...</p>
+    <p>It will be one that V205 finds interesting, so don't worry  about being bored(unless you don't like tech :( )</p>
+  </body>
+  
+</BaseLayout>
